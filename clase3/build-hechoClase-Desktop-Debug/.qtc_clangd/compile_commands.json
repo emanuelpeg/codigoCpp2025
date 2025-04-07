@@ -3,7 +3,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-ykJmvo/clang-uiheader-DDGuMK",
+        "/tmp/QtCreator-geypRv/clang-uiheader-OlvHXQ",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",

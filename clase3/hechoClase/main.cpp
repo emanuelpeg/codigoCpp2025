@@ -116,11 +116,68 @@ char * subString(char * txt, int start, int end) {
     return aux;
 }
 
+void copiar(char* destino, const char* origen, int longitud) {
+    for (int i = 0; i < longitud; ++i) {
+        destino[i] = origen[i];
+    }
+}
+
+char** cortar(char* str, int& count, char delimiter = ' ') {
+    int n = len(str);
+    int cantidadDePalabras = 0;
+    for(int i = 0; i < n; i++)  {
+        if (str[i] == delimiter) {
+            cantidadDePalabras++;
+        }
+    }
+
+    cantidadDePalabras++;
+    char** partes = new char*[cantidadDePalabras];
+    count = 0;
+
+    const char* inicio = str;
+    const char* actual = str;
+
+    while (*actual != '\0') {
+        if (*actual == delimiter) {
+            int longitud = actual - inicio;
+            if (longitud > 0) {
+                char* palabra = new char[longitud + 1];
+                copiar(palabra, inicio, longitud);
+                palabra[longitud] = '\0';
+                partes[count++] = palabra;
+            }
+            inicio = actual + 1;
+        }
+        ++actual;
+    }
+
+    // Agregar la última palabra
+    if (actual != inicio) {
+        int longitud = actual - inicio;
+        char* palabra = new char[longitud + 1];
+        copiar(palabra, inicio, longitud);
+        palabra[longitud] = '\0';
+        partes[count++] = palabra;
+    }
+
+    return partes;
+}
+
+
+
 int main()
 {
-    char * saludo = "Hola Mundo!!! ";
+    char* texto = "hola mundo prueba";
+    int cantidad = 0;
 
-    cout << mayuscula(saludo) <<endl;
-    cout << subString(saludo,5,10) <<endl;
+    char** resultado = cortar(texto, cantidad);
+
+    for (int i = 0; i < cantidad; ++i) {
+        std::cout << resultado[i] << std::endl;
+        delete[] resultado[i];  // Liberar cada palabra
+    }
+
+    delete[] resultado;
     return 0;
 }
