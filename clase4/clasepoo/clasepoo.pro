@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         alumno.cpp \
+        curso.cpp \
         main.cpp
 
 HEADERS += \
-    alumno.h
+    alumno.h \
+    curso.h

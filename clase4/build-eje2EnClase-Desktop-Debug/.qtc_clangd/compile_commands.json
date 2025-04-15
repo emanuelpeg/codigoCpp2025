@@ -3,7 +3,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-geypRv/clang-uiheader-OlvHXQ",
+        "/tmp/QtCreator-bcOSeF/clang-uiheader-EzlOwD",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -55,7 +55,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-geypRv/clang-uiheader-OlvHXQ",
+        "/tmp/QtCreator-bcOSeF/clang-uiheader-EzlOwD",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -107,7 +107,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-geypRv/clang-uiheader-OlvHXQ",
+        "/tmp/QtCreator-bcOSeF/clang-uiheader-EzlOwD",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",

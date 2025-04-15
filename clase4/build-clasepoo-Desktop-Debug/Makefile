@@ -53,8 +53,10 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../clasepoo/alumno.cpp \
+		../clasepoo/curso.cpp \
 		../clasepoo/main.cpp 
 OBJECTS       = alumno.o \
+		curso.o \
 		main.o
 DIST          = /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/common/unix.conf \
@@ -311,6 +313,7 @@ DIST          = /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		../clasepoo/.qmake.stash \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -324,7 +327,9 @@ DIST          = /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/exceptions.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/yacc.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/lex.prf \
-		../clasepoo/clasepoo.pro alumno.h ../clasepoo/alumno.cpp \
+		../clasepoo/clasepoo.pro alumno.h \
+		curso.h ../clasepoo/alumno.cpp \
+		../clasepoo/curso.cpp \
 		../clasepoo/main.cpp
 QMAKE_TARGET  = clasepoo
 DESTDIR       = 
@@ -592,6 +597,7 @@ Makefile: ../clasepoo/clasepoo.pro /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf \
 		/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -862,6 +868,7 @@ Makefile: ../clasepoo/clasepoo.pro /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/qt_config.prf:
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/toolchain.prf:
 /home/emanuel/Qt/6.4.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -922,7 +929,12 @@ compiler_clean:
 alumno.o: ../clasepoo/alumno.cpp ../clasepoo/alumno.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o alumno.o ../clasepoo/alumno.cpp
 
-main.o: ../clasepoo/main.cpp ../clasepoo/alumno.h
+curso.o: ../clasepoo/curso.cpp ../clasepoo/curso.h \
+		../clasepoo/alumno.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o curso.o ../clasepoo/curso.cpp
+
+main.o: ../clasepoo/main.cpp ../clasepoo/alumno.h \
+		../clasepoo/curso.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../clasepoo/main.cpp
 
 ####### Install
