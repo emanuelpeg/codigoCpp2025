@@ -65,7 +65,7 @@ int VectorDinamico::menor()
 {
     int m = vec[0];
     for(int i = 1; i < this->cant; i++){
-        if (m < vec[i]) {
+        if (m > vec[i]) {
             m = vec[i];
         }
     }
