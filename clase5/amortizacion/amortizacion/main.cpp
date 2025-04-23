@@ -13,17 +13,11 @@ int main()
     GestorContable gestorContable = GestorContable();
 
     Terreno * unTerreno = new Terreno();
-    unTerreno->setValor(120000.0);
+    unTerreno->setValor(1200000.0);
     gestorContable.imprimir(unTerreno);
 
     Rodado * unRodado = new Rodado();
     unRodado->setKm(2450);
-    /*Rodado * o = NULL;
-    if (o = dynamic_cast<Rodado*> (unRodado)) {
-        o->setKm(2450);
-    }*/
-
-
     unRodado->setValor(400000.00);
     gestorContable.imprimir(unRodado);
 
