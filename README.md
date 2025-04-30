@@ -1,4 +1,3 @@
-# codigoCpp2024
 Código de la cátedra Programación orientada a objeto
 
 Las condiciones establecidas para este año dado la modalidad virtual de dictado son:
