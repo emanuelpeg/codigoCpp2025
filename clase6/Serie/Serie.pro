@@ -8,10 +8,12 @@ SOURCES += \
         main.cpp \
         serie.cpp \
         serieimpar.cpp \
+        serieloca.cpp \
         seriepar.cpp
 
 HEADERS += \
     juego.h \
     serie.h \
     serieimpar.h \
+    serieloca.h \
     seriepar.h

@@ -20,9 +20,11 @@ int main()
         cin >> resp;
 
         if (juego.estaBien(resp)) {
-            cout << " Ganaste ! "<< juego.getPuntos() << endl;
+            cout << " Ganaste ! "<< endl;
+            cout << "Tus Puntos: " << juego.getPuntos() << endl;
         } else {
-            cout << " Perdiste :(  "<< juego.getPuntos() << endl;
+            cout << " Perdiste :(  " << endl;
+            cout << "Tus Puntos: " << juego.getPuntos() << endl;
         }
 
         cout << " Desea seguir jugando? (s/n)  ";

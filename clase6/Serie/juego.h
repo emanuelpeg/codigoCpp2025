@@ -6,7 +6,7 @@ class Juego
 {
 private:
     int puntos = 0;
-    Serie * serie = 0;
+    Serie * serie = nullptr;
     void generar();
 public:
     Juego();    
