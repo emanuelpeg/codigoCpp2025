@@ -9,11 +9,17 @@ SOURCES += \
         serie.cpp \
         serieimpar.cpp \
         serieloca.cpp \
-        seriepar.cpp
+        seriepar.cpp \
+        seriealternada.cpp \
+        serieexponencial.cpp \
+        serieprimo.cpp
 
 HEADERS += \
     juego.h \
     serie.h \
     serieimpar.h \
     serieloca.h \
-    seriepar.h
+    seriepar.h \
+    seriealternada.h \
+    serieexponencial.h \
+    serieprimo.h
