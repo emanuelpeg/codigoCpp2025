@@ -3,7 +3,7 @@
     "arguments": [
         "clang",
         "-I",
-        "/tmp/QtCreator-LbHnSs/clang-uiheader-iEDMXP",
+        "/tmp/QtCreator-NEYzTk/clang-uiheader-dxRYWP",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -16,15 +16,15 @@
         "-std=gnu++17",
         "-DQ_CREATOR_RUN",
         "-I",
-        "/home/emanuel/Facultad/programacion_orientada_objeto/2024/codigoCpp2024/clase11/numeros/numeros",
+        "/home/emanuel/Facultad/programacion_orientada_objeto/2025/codigoCpp2025/clase11/numeros/numeros",
         "-I",
         "/home/emanuel/Qt/6.4.0/gcc_64/mkspecs/linux-g++",
         "-isystem",
-        "/usr/include/c++/11",
+        "/usr/include/c++/13",
         "-isystem",
-        "/usr/include/x86_64-linux-gnu/c++/11",
+        "/usr/include/x86_64-linux-gnu/c++/13",
         "-isystem",
-        "/usr/include/c++/11/backward",
+        "/usr/include/c++/13/backward",
         "-isystem",
         "/usr/local/include",
         "-isystem",
@@ -43,9 +43,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/emanuel/Facultad/programacion_orientada_objeto/2024/codigoCpp2024/clase11/numeros/numeros/main.cpp"
+        "/home/emanuel/Facultad/programacion_orientada_objeto/2025/codigoCpp2025/clase11/numeros/numeros/main.cpp"
     ],
-    "directory": "/home/emanuel/Facultad/programacion_orientada_objeto/2024/codigoCpp2024/clase11/numeros/numeros/.qtc_clangd",
-    "file": "/home/emanuel/Facultad/programacion_orientada_objeto/2024/codigoCpp2024/clase11/numeros/numeros/main.cpp"
+    "directory": "/home/emanuel/Facultad/programacion_orientada_objeto/2025/codigoCpp2025/clase11/numeros/numeros/.qtc_clangd",
+    "file": "/home/emanuel/Facultad/programacion_orientada_objeto/2025/codigoCpp2025/clase11/numeros/numeros/main.cpp"
 }
 ]

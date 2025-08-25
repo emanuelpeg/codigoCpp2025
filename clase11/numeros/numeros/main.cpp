@@ -26,13 +26,13 @@ int main()
     for(std::size_t i = 0; i<numeros.size(); i++) {
         cout << numeros[i]  << ", ";
     }
-
     cout << " --------------- " << endl;
-
-    auto d = [](int i,int j) -> bool { return i>j; };
-
+    //std::sort(numeros.begin(),numeros.end(), des);
+   //std::sort(numeros.rbegin(),numeros.rend());
     std::sort(numeros.begin(),numeros.end(),
-              d);
+              [](int i,int j) -> bool {
+        return i>j;
+    });
 
     for(int i = 0; i<numeros.size(); i++) {
         cout << numeros[i]  << ", ";

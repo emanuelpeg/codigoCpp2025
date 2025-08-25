@@ -25,7 +25,8 @@ int main()
     vector<Persona> v = agenda.listarPersonasQueCumplen(f);
 
     for (int i = 0; i< v.size(); i++) {
-        cout << i << " " << v[i].getNombre()<< endl;
+        cout << i << " " << v[i].getNombre()<< " "
+             << v[i].getTelefono() <<endl;
     }
 
     cout << endl;

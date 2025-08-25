@@ -8,7 +8,8 @@ Fecha::Fecha(int dd, int mm, int yyyy){
 
 bool operator== (const Fecha& unaFecha, const Fecha& otraFecha){
     return (unaFecha.dd == otraFecha.dd) &&
-            (unaFecha.mm == otraFecha.mm) && (unaFecha.yyyy == otraFecha.yyyy);
+            (unaFecha.mm == otraFecha.mm) &&
+            (unaFecha.yyyy == otraFecha.yyyy);
 }
 
 bool operator<(const Fecha& unaFecha, const Fecha& otraFecha){

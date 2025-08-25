@@ -14,11 +14,9 @@ void Agenda::insertar(Fecha fecha, Persona persona) {
 std::vector<Persona> Agenda::listarPersonasQueCumplen(Fecha fecha){
     std::vector<Persona> resultado;
 
-    std::pair<std::multimap<Fecha,Persona>::iterator, std::multimap<Fecha,Persona>::iterator> ppp;
+    auto ppp = this->agenda.equal_range(fecha);
 
-    ppp = this->agenda.equal_range(fecha);
-
-    for (std::multimap<Fecha,Persona>::iterator it2 = ppp.first;
+    for (auto it2 = ppp.first;
            it2 != ppp.second;
            ++it2) {
 
