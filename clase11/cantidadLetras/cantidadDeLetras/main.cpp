@@ -18,7 +18,9 @@ int main()
         i++;
     }
 
-    for (auto i = palabras.begin(); i != palabras.end(); ++i) {
+    for (auto i = palabras.begin();
+         i != palabras.end();
+         ++i) {
         cout << i->first << " " << i->second << endl;
     }
 
