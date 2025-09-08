@@ -10,7 +10,7 @@ const std::vector<Persona> &Agenda::getPersonas() const
 
 Agenda::Agenda()
 {
-    this->dao = new PersonaDaoMem();
+    this->dao = new PersonaDaoFile();
 }
 
 void Agenda::leer()

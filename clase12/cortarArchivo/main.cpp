@@ -24,14 +24,14 @@ int main()
 
     cant = cant / cantCut;
 
-    ofstream myfileOf("example0.txt");
+    ofstream myfileOf("example00.txt");
     int aux = 0;
     int nro = 1;
     while (getline(myfile2,line)) {
        myfileOf << line;
        myfileOf << endl;
        aux++;
-       if (aux == cant) {
+       if (aux > cant) {
            aux = 0;
            myfileOf.close();
            myfileOf.open("example0"+to_string(nro)+".txt");

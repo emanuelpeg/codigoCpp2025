@@ -17,7 +17,8 @@ std::vector<Persona> PersonaDaoFile::leerTodo()
                         std::ios::binary | std::ios::app);
     if (archiContacto.is_open()) {
         strContacto c;
-        while (archiContacto.read((char*)&c, sizeof(strContacto))) {
+        while (archiContacto.read((char*)&c,
+                                  sizeof(strContacto))) {
             Contacto unContacto(c.tipo, c.valor);
             unContacto.setId_persona(c.id_persona);
             contactos.push_back(unContacto);
