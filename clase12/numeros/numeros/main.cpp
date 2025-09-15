@@ -24,8 +24,7 @@ int main()
 
     ifstream inArchivo("nro.dat", ios::binary);
     int a;
-    while(!inArchivo.eof()) {
-        inArchivo.read((char*) &a, sizeof(int));
+    while(inArchivo.read((char*) &a, sizeof(int))) {
         cout << a << " ";
     }
     inArchivo.close();
