@@ -15,7 +15,8 @@ char Internacional::getTipo()
    return 'I';
 }
 
-Internacional::Internacional(char *cod, char *marca, double precio, double precioUSD):Producto(cod, marca, precio)
+Internacional::Internacional(char *cod, char *marca,
+                             double precio, double precioUSD):Producto(cod, marca, precio)
 {
    this->precioUSD = precioUSD;
 }

@@ -8,7 +8,8 @@ class Internacional : public Producto
 private:
     double precioUSD;
 public:
-    Internacional(char* cod, char* marca, double precio, double precioUSD);
+    Internacional(char* cod, char* marca, double precio,
+                  double precioUSD);
     void actualizarPrecio();
     double getPrecioUSD() const;
     void setPrecioUSD(double newPrecioUSD);

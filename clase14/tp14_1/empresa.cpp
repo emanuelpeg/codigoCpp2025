@@ -31,13 +31,16 @@ void Empresa::leerArchivo()
         while (archi.read((char*)&record,sizeof(record))) {
             switch (record.tipo) {
             case 'N':
-                this->prods.push_back(new Nacional(record.cod, record.marca, record.precio));
+                this->prods.push_back(new Nacional(record.cod,
+                                   record.marca, record.precio));
                 break;
             case 'I':
-                this->prods.push_back(new Internacional(record.cod, record.marca, record.precio, this->varUSD));
+                this->prods.push_back(new Internacional(record.cod,
+                         record.marca, record.precio, this->varUSD));
                 break;
             case 'J':
-                this->prods.push_back(new Jardin(record.cod, record.marca, record.precio));
+                this->prods.push_back(new Jardin(record.cod,
+                                  record.marca, record.precio));
                 break;
             default:
                 break;
@@ -50,10 +53,10 @@ void Empresa::leerArchivo()
 void Empresa::escArchivo()
 {
     ofstream archi("productos_act.dat", ios::binary);
+    prd_strc record;
     for(int i = 0; i< this->prods.size(); i++) {
         Producto * prod = this->prods[i];
         prod->actualizarPrecio();
-        prd_strc record;
         strcpy(record.cod, prod->getCod());
         strcpy(record.marca, prod->getMarca());
         record.precio = prod->getPrecio();
@@ -92,6 +95,12 @@ void Empresa::escArchivoEje()
     record.tipo = 'J';
     archi.write((char *)&record, sizeof(record));
 
+    strcpy(record.cod, "SarasaJard");
+    strcpy(record.marca, "Uno");
+    record.precio = 200;
+    record.tipo = 'J';
+    archi.write((char *)&record, sizeof(record));
+
     archi.close();
 }
 
@@ -102,7 +111,9 @@ bool comparPorCodigo(Producto * prod1,Producto * prod2) {
 void Empresa::listado()
 {
     ofstream archi("lista.dat");
+
     sort(this->prods.begin(), this->prods.end(), comparPorCodigo);
+
     for (int i = 0; i<this->prods.size(); i++) {
         archi << this->prods[i]->getMarca() << " ... $ " << this->prods[i]->getPrecio() << endl;
     }
@@ -117,7 +128,8 @@ void Empresa::cantidadPorMarca()
         marca =this->prods[i]->getMarca();
         prodsXMarca[marca] += 1;
     }
-    for (auto it = prodsXMarca.begin(); it != prodsXMarca.end(); ++it) {
+    for (auto it = prodsXMarca.begin();
+         it != prodsXMarca.end(); ++it) {
         cout <<  it->first << "  " << it->second<<endl;
     }
 }
