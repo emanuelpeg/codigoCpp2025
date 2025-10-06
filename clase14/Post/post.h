@@ -12,7 +12,8 @@ private:
     char fecha[8];
     std::vector<std::string> comentarios;
 public:
-    Post(char numero[10],char url[250], char autor[200], char fecha[8]);
+    Post(char numero[10],char url[250], char autor[200],
+    char fecha[8]);
     void agregarComentario(std::string comentario);
     int cantidadComentarios();
 };
